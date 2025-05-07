@@ -13,118 +13,176 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         
         <!-- Custom CSS -->
-        <title>Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Mark McCann's Portfolio</title>
         <style>
+            /* Custom styling */
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f8f9fa;
+            }
             
-            img src{
-                width: 300px;
+            .profile-image {
+                width: 350px;
+                height: auto;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s;
+                margin: 20px 0;
+            }
+            
+            .profile-image:hover {
+                transform: scale(1.03);
+            }
+            
+            .navbar {
+                background: linear-gradient(135deg, #343a40 0%, #212529 100%) !important;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                padding: 15px 0;
+            }
+            
+            .navbar-brand {
+                margin-right: 25px;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+            
+            .navbar-brand:hover {
+                color: #17a2b8 !important;
+            }
+            
+            .navbar h1 {
+                color: white;
+                margin-right: 40px;
+                font-size: 1.8rem;
+            }
+            
+            .page-header {
+                color: #343a40;
+                border-bottom: 2px solid #17a2b8;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+            }
+            
+            .blog-post {
+                background-color: white;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                margin-bottom: 30px;
+            }
+            
+            .sidebar-section {
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                padding: 20px;
+                margin-bottom: 25px;
+                border-left: 4px solid #17a2b8;
+            }
+            
+            .sidebar-section h4 {
+                color: #343a40;
+                margin-bottom: 15px;
+            }
+            
+            .goal-list li {
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 5px;
+            }
+            
+            .goal-list .completed:after {
+                content: "✓";
+                color: #28a745;
+                font-weight: bold;
+                margin-left: 8px;
+            }
+            
+            .blog-footer {
+                padding: 20px;
+                text-align: center;
+                margin-top: 20px;
+                border-radius: 8px;
+                background-color: white !important;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+            
+            .contact-link {
+                color: #17a2b8;
+                text-decoration: none;
+                font-weight: 500;
+            }
+            
+            .contact-link:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <h1>Mark McCann</h1>
+                <div class="navbar-nav">
+                    <a class="navbar-brand" href="index.html">Home</a>
+                    <a class="navbar-brand" href="academic.html">Academics</a>
+                    <a class="navbar-brand" href="skills.html">Certifications</a>
+                    <a class="navbar-brand" href="service.html">Community Service/Hobbies</a>
+                    <a class="navbar-brand" href="work.html">Work</a>
+                </div>
+            </div>
+        </nav>
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
-                <center>
-                
-                <div class="container-fluid">
-                   <h1>Mark McCann</h1>
-                    <!--Don't collapse the brandname -->
-                    
-                    <a class="navbar-brand cd 4" href="#"></a>
-                    <a class = "navbar-brand" href = "index.html">Home</a>
-                    <a class = "navbar-brand" href = "academic.html">Academics</a>
-                    <a class = "navbar-brand" href = "skills.html">Certifications</a>
-                    <a class = "navbar-brand" href = "service.html">Community Service/Hobbies</a>
-                    <a class = "navbar-brand" href = "work.html">Work</a>
-                    <!-- Toggle button (three vertical lines -->
-                    
-                    </div>
-                    </nav>
-                    </center>
-        <!-- Give this main the classes cover and container-fluid -->
-        <main class = "container">
-            <div class = "row">
+        <main class="container my-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="page-header text-center">Welcome to my Page</h3>
+                </div>
+            </div>
             
-                <div class = "col-md-12">
-                <br>
-                    <center><h3 class = "pb-4 mb-4 fst-italic border-bottom">Welcome to my Page</h3></center>
+            <div class="row">
+                <div class="col-md-8">
+                    <article class="blog-post">
+                        <div class="text-center">
+                            <img src="https://codehs.com/uploads/0e325cff94dc8e405beccdeb022d95cf" class="profile-image" alt="Mark McCann">
+                        </div>
+                        <p class="mt-4">
+                            Greetings! I am Mark McCann. I am a rising senior at Waipahu High School. I am a future programmer in the making. I have taken classes before to learn more about programming, such as ICS 111 from Leeward Community College teaching me about java and Cybersecurity classes from Waipahu High School which taught me languages such as html, css, and javascript.
+                        </p>
+                        <p>
+                            Additionally, I am heavily involved in my school as I am a treasurer, Tennis player, Spanish Honor Society Member, and Chess Club member. Outside of school, I enjoy playing ping pong, tennis, gaming, weightlifting and volunteering at my church. I am also a member of my church's council, representing the youth. With being active around my community, I learned to be hardworking, positive, and excited for what else life offers me.
+                        </p>
+                    </article>
+                    
+                    <div class="blog-post">
+                        <h3>Goals</h3>
+                        <ul class="goal-list">
+                            <li>Graduate with at least a 3.7 GPA</li>
+                            <li>Attend a 2 year community college</li>
+                            <li>Finish off my college experience at UH Manoa/UH West Oahu</li>
+                            <li>Obtain private residence within 15 years</li>
+                            <li>Hone my tennis skills</li>
+                            <li class="completed">Acquire a job</li>
+                            <li class="completed">Be involved in a hack</li>
+                        </ul>
+                    </div>
                 </div>
                 
-            
-               <div class = "col-md-12">
-                   
-                 
-                   <article class = "blog-post">
-                   <br>
-                   <center><img src = "https://codehs.com/uploads/0e325cff94dc8e405beccdeb022d95cf" style = "width:200px"></center>
-                       <br>
-                   <p>Greetings! I am Mark McCann. I am a rising senior at Waipahu High School. I am a future programmer in the making. I have taken classes before to learn more about programming, such as ICS 111 from Leeward Community College teaching me about java and Cybersecurity classes from Waipahu High School which taught me langugages such as html, css, and javascript.
-                   Additionally, I am heavily involved in my school as I am a treasurer, Tennis player, Spanish Honor Society Member, and Chess Club member. Outside of school, I enjoy playing ping pong, tennis, gaming, weightlifting and volunteering at my church. I am also a member of my church's council, representing the youth. With being active around my community, I learned to be hardworking, positive, and excited for what else life offers me. 
-                   </p>
-                   </article>
-                   
-               </div>
-               
-               </div>
-           
-               <div class = "row">
-                   <div class = "col-md-12">
-                       <h3 class = "pb-4 mb-4 fst-italic border-bottom"></h3>
-                   </div>
-               </div>
-               <div class = "row">
-               <div class = "col">
-                   
-                   <h3>Goals</h3>
-                   <p>My goals are to:
-                   <ul>
-                       <li>Graduate with at least a 3.7 GPA </li>
-                       <li>Attend a 2 year community college</li>
-                       <li>Finish off my college experience at UH Manoa/UH West Oahu</li>
-                       <li>Obtain private residence within 15 years</li>
-                       <li>Hone my tennis skills</li>
-                       <li>Acquire a job *COMPLETE*</li>
-                       <li>Be involved in a hack *COMPLETE*</li>
-                       
-                       
-                   </ul>
-                   </p>
-               </div>
-               <div class = "col-md-4">
-                   <div class = "position-sticky" style: "top: 2rem;">
-                       <div class = "p-4 mb-3 bg-light rounded">
-                           <h4 class = "fst-italic">About ICS 111</h4>
-                           <p class = "mb-0">ICS 111 is a 15-16 week course which students learn about the programming language java. In the course, students learn java subjects such as custom exceptions, if-else statements, user input, and etc. </p>
-                       </div> 
-                       <div class = "p-4 mb-3 bg-light rounded">
-                           <h4 class = "fst-italic">More information about Waipahu High School's CyberSecurity program can be found here.</h4>
-                           <ol class = "list-unstyled mb-0">
-                               <li><a href ="https://www.waipahuhigh.org/apps/pages/index.jsp?uREC_ID=555317&type=d&termREC_ID=&pREC_ID=1073117">Cybersecurity program</a></li>
-                              
-                           </ol>
-                       </div>
-                       
-                   </div>
-               </div>
-                  <div class = "row">
-                   <div class = "col-md-12">
-                       <h3 class = "pb-4 mb-4 fst-italic border-bottom"></h3>
-                   </div>
-               </div>
-               <footer class = "blog-footer bg-light rounded">
-               <div class = "col"> 
-                <h3>Contact Me! <a href = "markmccann20510@gmail.com">markmccann20510@gmail.com</a></h3>
-                  
-               </div>
-                </footer>
+                <div class="col-md-4">
+                    <div class="sidebar-section">
+                        <h4>About ICS 111</h4>
+                        <p class="mb-0">ICS 111 is a 15-16 week course which students learn about the programming language java. In the course, students learn java subjects such as custom exceptions, if-else statements, user input, and etc.</p>
+                    </div> 
+                    
+                    <div class="sidebar-section">
+                        <h4>Waipahu High School CyberSecurity</h4>
+                        <p>More information about Waipahu High School's CyberSecurity program can be found here:</p>
+                        <a href="https://www.waipahuhigh.org/apps/pages/index.jsp?uREC_ID=555317&type=d&termREC_ID=&pREC_ID=1073117" class="btn btn-outline-info w-100">Cybersecurity Program</a>
+                    </div>
+                </div>
             </div>
-           
             
+            <footer class="blog-footer">
+                <h3>Contact Me! <a href="mailto:markmccann20510@gmail.com" class="contact-link">markmccann20510@gmail.com</a></h3>
+            </footer>
         </main>
-            
-            
-        
     </body>
 </html>
-
