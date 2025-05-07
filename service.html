@@ -1,215 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Mark McCann - Community Service & Hobbies</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>       <script>
-  
-  
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <style>
-  table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-container-fluid, h1 {
-color: gray;
-}
-p{
-background-color: white;
-color: black;
-}
-
-h3{
-color:black;
-background-color: white;
-}
-
-img {
-height: 500px;
-}
-</style>
+    /* Custom styling */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+    }
+    
+    .navbar {
+        background: linear-gradient(135deg, #343a40 0%, #212529 100%) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 15px 0;
+    }
+    
+    .navbar-brand {
+        margin-right: 25px;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .navbar-brand:hover {
+        color: #17a2b8 !important;
+    }
+    
+    .navbar h1 {
+        color: white;
+        margin-right: 40px;
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        color: #343a40;
+        border-bottom: 2px solid #17a2b8;
+        padding-bottom: 10px;
+        margin: 30px 0 20px 0;
+    }
+    
+    .carousel {
+        margin-bottom: 30px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .carousel-item {
+        height: 500px;
+    }
+    
+    .carousel-item img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        padding: 15px;
+        bottom: 20px;
+    }
+    
+    .card {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 8px;
+    }
+    
+    .card-header {
+        background-color: #17a2b8;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px 8px 0 0 !important;
+    }
+    
+    .table {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .table thead {
+        background-color: #17a2b8;
+        color: white;
+    }
+    
+    .table-hover tbody tr:hover {
+        background-color: rgba(23, 162, 184, 0.1);
+    }
+    
+    .table td, .table th {
+        padding: 12px 15px;
+        vertical-align: middle;
+        border: none;
+    }
+    
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(0,0,0,0.02);
+    }
+    
+    .intro-text {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+    }
+    
+    a {
+        color: #17a2b8;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    a:hover {
+        color: #138496;
+        text-decoration: underline;
+    }
+    
+    .hobby-icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #17a2b8;
+    }
+    
+    .service-hours, .hobby-hours {
+        font-weight: bold;
+        color: #17a2b8;
+    }
+    
+    /* Add animation for hover on tables */
+    .table-hover tbody tr {
+        transition: transform 0.2s ease;
+    }
+    
+    .table-hover tbody tr:hover {
+        transform: translateX(5px);
+    }
+  </style>
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <h1>Mark McCann</h1>
+        <div class="navbar-nav">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="academic.html">Academics</a>
+            <a class="navbar-brand" href="skills.html">Certifications</a>
+            <a class="navbar-brand" href="service.html">Community Service/Hobbies</a>
+            <a class="navbar-brand" href="work.html">Work</a>
+        </div>
+    </div>
+</nav>
 
+<div class="container mt-4">
+    <h2 class="section-title">Community Service Activities</h2>
+    <div class="intro-text">
+        <p class="lead">Here are some of the service events I've participated in. These experiences have helped me develop important skills while giving back to my community.</p>
+    </div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <div class="container-fluid">
-                   
-                    <!--Don't collapse the brandname -->
-                    <h1>Mark McCann</h1>
-                    <a class="navbar-brand" href="#"></a>
-                    <a class = "navbar-brand" href = "index.html">Home</a>
-                    <a class = "navbar-brand" href = "academic.html">Academic</a>
-                    <a class = "navbar-brand" href = "skills.html">Certifications</a>
-                    <a class = "navbar-brand" href = "service.html"> Community Service/Hobbies</a>
-		    <a class = "navbar-brand" href = "work.html">Work</a>
-                    </div>
-                    </nav>
-
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-  </div>
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://codehs.com/uploads/ccb3c2e03fdb30e0a3cfee5e1dfa4e2d" class="d-block" style="width:100%">
-      <div class="carousel-caption">
-        <h3>AMVETS Spanish Festivial</h3>
-        <p>During this event, I particpated as a volunteer at the event, representing the Spanish Club. At the event, I helped out in various areas in the Ewa beach property. I helped clean out trash for an hour with friends, as its shown in the picture above. Additonally, I helped out at the Spanish Club booth, creating Ojo Dios (God's eye) which is a popsicle and yarn arts and craft activity. With creating the Ojo Dios, I then distributed to the children whom attended the booth. Because of this event, I learned how to be fast with my hands, observant, and active. </p>
-      </div>  
+    <!-- Carousel -->
+    <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="3"></button>
+        </div>
       
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://codehs.com/uploads/ccb3c2e03fdb30e0a3cfee5e1dfa4e2d" class="d-block">
+                <div class="carousel-caption">
+                    <h3>AMVETS Spanish Festival</h3>
+                    <p>During this event, I participated as a volunteer representing the Spanish Club. At the event, I helped clean trash for an hour with friends, as shown in the picture above. Additionally, I helped at the Spanish Club booth, creating Ojo Dios (God's eye) crafts which I distributed to children who attended. Through this experience, I learned to be fast with my hands, observant, and active.</p>
+                </div>  
+            </div>
+            <div class="carousel-item">
+                <img src="https://codehs.com/uploads/a1e109cf3ddb5403e941405ac56b578c" alt="Cultural Fest" class="d-block">
+                <div class="carousel-caption">
+                    <h3>Cultural Fest (WHS)</h3>
+                    <p>On this day, I was involved with the Spanish Club and Spanish Honor Society. During this event, I helped create arts and crafts for children. Because Day of the Dead was approaching, I created dye for sugar skulls. Through this event, I learned how to work well with others, be creative, and work efficiently.</p>
+                </div> 
+            </div>
+            <div class="carousel-item">
+                <img src="https://codehs.com/uploads/cbc3ba5379ce5906f0ab932471bfb23f" alt="Special Olympics" class="d-block">
+                <div class="carousel-caption">
+                    <h3>Special Olympics</h3>
+                    <p>With the Leo club, I was formerly a member who helped out at Special Olympics. I helped guide children on the baseball field and encouraged participants. Being involved in this event taught me to be friendly, presentable, and encouraging.</p>
+                </div>  
+            </div>
+            <div class="carousel-item">
+                <img src="https://codehs.com/uploads/7457a40b3618d911c89260af2caac2e4" alt="St. Jude" class="d-block">
+                <div class="carousel-caption">
+                    <h3>St. Jude 25th Anniversary</h3>
+                    <p>At my church's 25th Anniversary celebration, I helped deliver food to elderly attendees and those seated. I also assisted with cleanup after the event, contributing to the success of this important milestone.</p>
+                </div>  
+            </div>
+        </div>
+      
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
-    <div class="carousel-item">
-      <img src="https://codehs.com/uploads/a1e109cf3ddb5403e941405ac56b578c" alt="New York" class="d-block" style="width:100%">
-       <div class="carousel-caption">
-        <h3>Cultural Fest (WHS)</h3>
-        <p>On this day, I was involved with the Spanish Club and Spanish Honor Society. During this event, I helped create arts and crafts for children. Because of Day of the Dead being around the corner, I created dye for sugar skulls. As a result of this event, I learned how to work with others, creative, and fast.</p>
-      </div> 
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h2 class="section-title">Service Hours Log</h2>
+            <div class="card">
+                <div class="card-header">
+                    Community Service Activities
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Hours</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://docs.google.com/document/d/19A8NXzFJhMGofWQoXbeA3Wgp13ghKQr2FhUq3Uc232o/edit?usp=share_link" target="_blank">AMVETS Spanish Festival</a></td>
+                                <td class="service-hours">3</td>
+                                <td>2022</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://docs.google.com/document/d/1wqVfiVQK7TzNWjcVQKkRr3E1X4Gg6ggesrfD5rUp8f8/edit?usp=sharing" target="_blank">Special Olympics</a></td>
+                                <td class="service-hours">3</td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://docs.google.com/document/d/1-XdJ2YlI3iwKWXJvZ1h37WBiDMw6RgZKU4TkKJa6sng/edit?usp=sharing" target="_blank">Cultural Fest</a></td>
+                                <td class="service-hours">4</td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://docs.google.com/document/d/1U7UoiQBECO177brTmnuL4Ry9FKoC8LUsnuJ02rMg1wY/edit?usp=sharing" target="_blank">St. Jude 25th Anniversary</a></td>
+                                <td class="service-hours">4</td>
+                                <td>2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <h2 class="section-title">Personal Hobbies</h2>
+            <div class="card">
+                <div class="card-header">
+                    Activities I Enjoy
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Hours</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="hobby-icon">🎮</i> Gaming (Creating buildings/Sport Games)</td>
+                                <td class="hobby-hours">100+</td>
+                            </tr>
+                            <tr>
+                                <td><i class="hobby-icon">🧱</i> Lego Building</td>
+                                <td class="hobby-hours">10+</td>
+                            </tr>
+                            <tr>
+                                <td><i class="hobby-icon">🏓</i> Ping Pong</td>
+                                <td class="hobby-hours">10+</td>
+                            </tr>
+                            <tr>
+                                <td><i class="hobby-icon">🏊</i> Swimming</td>
+                                <td class="hobby-hours">20+</td>
+                            </tr>
+                            <tr>
+                                <td><i class="hobby-icon">🎾</i> Tennis</td>
+                                <td class="hobby-hours">100+</td>
+                            </tr>
+                            <tr>
+                                <td><i class="hobby-icon">🏋️</i> Weightlifting</td>
+                                <td class="hobby-hours">50+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://codehs.com/uploads/cbc3ba5379ce5906f0ab932471bfb23f" alt="New York" class="d-block" style="width:100%">
-      <div class="carousel-caption">
-        <h3>Special Olympics</h3>
-        <p>With the Leo club, I was formely a member whom helped out at special olympics. I helped guide children in the baseball field, and was there to encourage the participants. With being involved at this event, I learned to be friendly, presentable, and encouraging.</p>
-      </div>  
-    </div>
-    <div class="carousel-item">
-      <img src="https://codehs.com/uploads/7457a40b3618d911c89260af2caac2e4" alt="New York" class="d-block" style="width:100%">
-      <div class="carousel-caption">
-        <h3>St. Jude 25th Anniversary</h3>
-        <p> At my church's 25th Anniversary, I helped deliver food to the elderly and to the people sitting down. I also helped cleaned up after the event as well.</p>
-      </div>  
-    </div>
-    
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
 </div>
 
-<div class="container-fluid mt-3">
-  <h1>Community Service</h1>
-  <h3 class = "pb-4 mb-4 fst italic border-bottom"></h3>
-  <h5><p>Here are some of the service events I participated in!</p></h5>
-  </div>
-
-  
-</div>
-<br>
-<table><h1>Service</h1>
-<h3 class = "pb-4 mb-4 fst italic border-bottom">
-<h5></p></h5>
-
-  <tr>
-    <th>Service</th>
-    <th>Hours</th>
-    <th>Year</th>
-    
-    
-  </tr>
-  <tr>
-    <td><a href = "https://docs.google.com/document/d/19A8NXzFJhMGofWQoXbeA3Wgp13ghKQr2FhUq3Uc232o/edit?usp=share_link">AMVETS Spanish Festivial</a></td>
-    <td>3</td>
-    <td>2022</td>
-      </tr>
-  <tr>
-    <td><a href = "https://docs.google.com/document/d/1wqVfiVQK7TzNWjcVQKkRr3E1X4Gg6ggesrfD5rUp8f8/edit?usp=sharing">Special Olympics</a></td>
-    <td>3</td>
-    <td>2023</td>
-    
-  </tr>
-   <tr>
-    <td><a href = "https://docs.google.com/document/d/1-XdJ2YlI3iwKWXJvZ1h37WBiDMw6RgZKU4TkKJa6sng/edit?usp=sharing">Culutral Fest</a></td>
-    <td>4</td>
-    <td>2023</td>
-    
-  </tr>
-   <tr>
-    <td><a href = "https://docs.google.com/document/d/1U7UoiQBECO177brTmnuL4Ry9FKoC8LUsnuJ02rMg1wY/edit?usp=sharing">St. Jude 25th Anniversary</a></td>
-    <td>4</td>
-	<td>2024</td>
-  
-  </tr>
-   
- 
-</table>
-     <br>
-<br>
-
-
-<h1>Hobbies</h1>
-<h3 class = "pb-4 mb-4 fst italic border-bottom"></h3> </div>
-
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Hours</th>
-    
-  </tr>
-  <tr>
-    <td>Gaming (Creating buildings/Sport Games)</td>
-    <td>100+</td>
-  </tr>
-  <tr>
-    <td>Lego Building</td>
-    <td>10+</td>
-  </tr>
-  <tr>
-  <td>Ping Pong</td>
-  <td>10+</td>
-</tr>
-<tr>
-<td>Swimming</td>
-<td>20+</td>
-</tr>
-<tr>
-<td>Tennis</td>
-<td>100+</td>
-</tr>
-<tr>
-<td>Weightlifting</td>
-<td>50+</td>
-</tr>
-</table>
-
-<br>
-
-
-
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <p class="mb-0">© 2024 Mark McCann - Portfolio</p>
+    </div>
+</footer>
 
 </body>
 </html>
