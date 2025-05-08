@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
     }
     
     .navbar-brand {
-        margin-right: 25px;
+        margin-right: 15px;
         font-weight: 500;
         transition: color 0.3s;
     }
@@ -29,10 +30,30 @@
         color: #17a2b8 !important;
     }
     
+    .navbar-toggler {
+        border-color: rgba(255,255,255,0.5);
+    }
+    
     .navbar h1 {
         color: white;
-        margin-right: 40px;
-        font-size: 1.8rem;
+        margin-right: 20px;
+        font-size: 1.5rem;
+    }
+    
+    @media (max-width: 991px) {
+        .navbar h1 {
+            font-size: 1.2rem;
+            margin-right: 0;
+        }
+        
+        .navbar-nav {
+            margin-top: 10px;
+        }
+        
+        .navbar-brand {
+            margin-right: 0;
+            padding: 8px 0;
+        }
     }
     
     .section-title {
@@ -58,6 +79,30 @@
         height: 500px;
         object-fit: cover;
         object-position: center;
+    }
+    
+    @media (max-width: 768px) {
+        .carousel-item {
+            height: 300px;
+        }
+        
+        .carousel-item img {
+            height: 300px;
+        }
+        
+        .carousel-caption {
+            padding: 10px;
+        }
+        
+        .carousel-caption h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .carousel-caption p {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
     }
     
     .carousel-caption {
@@ -102,6 +147,18 @@
         border: none;
     }
     
+    @media (max-width: 767px) {
+        .table td, .table th {
+            padding: 8px 10px;
+            font-size: 0.9rem;
+        }
+        
+        .hobby-icon {
+            font-size: 1.2rem !important;
+            margin-right: 5px !important;
+        }
+    }
+    
     .table-striped tbody tr:nth-of-type(odd) {
         background-color: rgba(0,0,0,0.02);
     }
@@ -144,6 +201,17 @@
     .table-hover tbody tr:hover {
         transform: translateX(5px);
     }
+    
+    /* Responsive table handling */
+    @media (max-width: 575px) {
+        .table-responsive {
+            border: none;
+        }
+    }
+    
+    footer {
+        margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
@@ -151,12 +219,17 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <h1>Mark McCann</h1>
-        <div class="navbar-nav">
-            <a class="navbar-brand" href="index.html">Home</a>
-            <a class="navbar-brand" href="academic.html">Academics</a>
-            <a class="navbar-brand" href="skills.html">Certifications</a>
-            <a class="navbar-brand" href="service.html">Community Service/Hobbies</a>
-            <a class="navbar-brand" href="work.html">Work</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav">
+                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="navbar-brand" href="academic.html">Academics</a>
+                <a class="navbar-brand" href="skills.html">Certifications</a>
+                <a class="navbar-brand" href="service.html">Community Service/Hobbies</a>
+                <a class="navbar-brand" href="work.html">Work</a>
+            </div>
         </div>
     </div>
 </nav>
@@ -183,7 +256,7 @@
         <!-- The slideshow/carousel -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://codehs.com/uploads/ccb3c2e03fdb30e0a3cfee5e1dfa4e2d" class="d-block">
+                <img src="https://codehs.com/uploads/ccb3c2e03fdb30e0a3cfee5e1dfa4e2d" class="d-block" alt="AMVETS Spanish Festival">
                 <div class="carousel-caption">
                     <h3>AMVETS Spanish Festival</h3>
                     <p>During this event, I participated as a volunteer representing the Spanish Club. At the event, I helped clean trash for an hour with friends, as shown in the picture above. Additionally, I helped at the Spanish Club booth, creating Ojo Dios (God's eye) crafts which I distributed to children who attended. Through this experience, I learned to be fast with my hands, observant, and active.</p>
@@ -213,8 +286,8 @@
             <div class="carousel-item">
                 <img src="https://codehs.com/uploads/e6d453b470d810b980a9ef10e42ae24c" alt="Campus Beautification" class="d-block">
                 <div class="carousel-caption">
-                    <h3>2024 Campus Beatufication</h3>
-                    <p>During the summer, I partipicated in Campus Beautification with the Spanish Honor Society.</p>
+                    <h3>2024 Campus Beautification</h3>
+                    <p>During the summer, I participated in Campus Beautification with the Spanish Honor Society.</p>
                 </div>  
             </div>
             <div class="carousel-item">
@@ -228,7 +301,7 @@
                 <img src="https://codehs.com/uploads/0f1b44ce9c876b23d9e276400c05a58b" alt="Festival" class="d-block">
                 <div class="carousel-caption">
                     <h3>2nd African American Festival</h3>
-                    <p>For Black History Month, I participated in dancing in front of others and as well help with crafts and games.</p>
+                    <p>For Black History Month, I participated in dancing in front of others and also helped with crafts and games.</p>
                 </div>  
             </div>
         </div>
@@ -243,104 +316,108 @@
     </div>
 
     <div class="row mt-5">
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <h2 class="section-title">Service Hours Log</h2>
             <div class="card">
                 <div class="card-header">
                     Community Service Activities
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Service</th>
-                                <th>Hours</th>
-                                <th>Year</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/19A8NXzFJhMGofWQoXbeA3Wgp13ghKQr2FhUq3Uc232o/edit?usp=share_link" target="_blank">AMVETS Spanish Festival</a></td>
-                                <td class="service-hours">3</td>
-                                <td>2022</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/1wqVfiVQK7TzNWjcVQKkRr3E1X4Gg6ggesrfD5rUp8f8/edit?usp=sharing" target="_blank">Special Olympics</a></td>
-                                <td class="service-hours">3</td>
-                                <td>2023</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/1-XdJ2YlI3iwKWXJvZ1h37WBiDMw6RgZKU4TkKJa6sng/edit?usp=sharing" target="_blank">Cultural Fest</a></td>
-                                <td class="service-hours">4</td>
-                                <td>2023</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/1U7UoiQBECO177brTmnuL4Ry9FKoC8LUsnuJ02rMg1wY/edit?usp=sharing" target="_blank">St. Jude 25th Anniversary</a></td>
-                                <td class="service-hours">4</td>
-                                <td>2024</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/1yd6TsE340PUPmiYQVy_KLLyiyUahCwHNlDVxasmj1gE/edit?usp=sharing" target="_blank">Campus Beautification</a></td>
-                                <td class="service-hours">4</td>
-                                <td>2024</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/1HAt5blqUqgRzE3znE9LmpLZukdKfqGTYvBplBOt4sfw/edit?usp=sharing" target="_blank">Aged to Perfection</a></td>
-                                <td class="service-hours">3</td>
-                                <td>2024</td>
-                            </tr>
-                            <tr>
-                                <td><a href="https://docs.google.com/document/d/1jzRz5sxUJG56jTWva7w-nthgleM7ho747eTgOmQ3ZaI/edit?usp=sharing" target="_blank">2nd African American Festival</a></td>
-                                <td class="service-hours">7</td>
-                                <td>2025</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Hours</th>
+                                    <th>Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/19A8NXzFJhMGofWQoXbeA3Wgp13ghKQr2FhUq3Uc232o/edit?usp=share_link" target="_blank">AMVETS Spanish Festival</a></td>
+                                    <td class="service-hours">3</td>
+                                    <td>2022</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/1wqVfiVQK7TzNWjcVQKkRr3E1X4Gg6ggesrfD5rUp8f8/edit?usp=sharing" target="_blank">Special Olympics</a></td>
+                                    <td class="service-hours">3</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/1-XdJ2YlI3iwKWXJvZ1h37WBiDMw6RgZKU4TkKJa6sng/edit?usp=sharing" target="_blank">Cultural Fest</a></td>
+                                    <td class="service-hours">4</td>
+                                    <td>2023</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/1U7UoiQBECO177brTmnuL4Ry9FKoC8LUsnuJ02rMg1wY/edit?usp=sharing" target="_blank">St. Jude 25th Anniversary</a></td>
+                                    <td class="service-hours">4</td>
+                                    <td>2024</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/1yd6TsE340PUPmiYQVy_KLLyiyUahCwHNlDVxasmj1gE/edit?usp=sharing" target="_blank">Campus Beautification</a></td>
+                                    <td class="service-hours">4</td>
+                                    <td>2024</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/1HAt5blqUqgRzE3znE9LmpLZukdKfqGTYvBplBOt4sfw/edit?usp=sharing" target="_blank">Aged to Perfection</a></td>
+                                    <td class="service-hours">3</td>
+                                    <td>2024</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://docs.google.com/document/d/1jzRz5sxUJG56jTWva7w-nthgleM7ho747eTgOmQ3ZaI/edit?usp=sharing" target="_blank">2nd African American Festival</a></td>
+                                    <td class="service-hours">7</td>
+                                    <td>2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <h2 class="section-title">Personal Hobbies</h2>
             <div class="card">
                 <div class="card-header">
                     Activities I Enjoy
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Activity</th>
-                                <th>Hours</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><i class="hobby-icon">🎮</i> Gaming (Creating buildings/Sport Games)</td>
-                                <td class="hobby-hours">100+</td>
-                            </tr>
-                            <tr>
-                                <td><i class="hobby-icon">🧱</i> Lego Building</td>
-                                <td class="hobby-hours">10+</td>
-                            </tr>
-                            <tr>
-                                <td><i class="hobby-icon">🏓</i> Ping Pong</td>
-                                <td class="hobby-hours">10+</td>
-                            </tr>
-                            <tr>
-                                <td><i class="hobby-icon">🏊</i> Swimming</td>
-                                <td class="hobby-hours">20+</td>
-                            </tr>
-                            <tr>
-                                <td><i class="hobby-icon">🎾</i> Tennis</td>
-                                <td class="hobby-hours">100+</td>
-                            </tr>
-                            <tr>
-                                <td><i class="hobby-icon">🏋️</i> Weightlifting</td>
-                                <td class="hobby-hours">50+</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Activity</th>
+                                    <th>Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="hobby-icon">🎮</i> Gaming (Creating buildings/Sport Games)</td>
+                                    <td class="hobby-hours">100+</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="hobby-icon">🧱</i> Lego Building</td>
+                                    <td class="hobby-hours">10+</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="hobby-icon">🏓</i> Ping Pong</td>
+                                    <td class="hobby-hours">10+</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="hobby-icon">🏊</i> Swimming</td>
+                                    <td class="hobby-hours">20+</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="hobby-icon">🎾</i> Tennis</td>
+                                    <td class="hobby-hours">100+</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="hobby-icon">🏋️</i> Weightlifting</td>
+                                    <td class="hobby-hours">50+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
