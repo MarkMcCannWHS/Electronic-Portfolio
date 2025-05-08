@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,11 +22,12 @@
             }
             
             .profile-image {
-                width: 350px;
+                max-width: 100%;
                 height: auto;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
                 transition: transform 0.3s;
-                margin: 20px 0;
+                margin: 20px auto;
+                display: block;
             }
             
             .profile-image:hover {
@@ -36,13 +37,14 @@
             .navbar {
                 background: linear-gradient(135deg, #343a40 0%, #212529 100%) !important;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                padding: 15px 0;
+                padding: 10px 0;
             }
             
             .navbar-brand {
-                margin-right: 25px;
+                margin-right: 15px;
                 font-weight: 500;
                 transition: color 0.3s;
+                font-size: 1rem;
             }
             
             .navbar-brand:hover {
@@ -51,8 +53,8 @@
             
             .navbar h1 {
                 color: white;
-                margin-right: 40px;
-                font-size: 1.8rem;
+                margin-right: 20px;
+                font-size: 1.5rem;
             }
             
             .page-header {
@@ -64,7 +66,7 @@
             
             .blog-post {
                 background-color: white;
-                padding: 25px;
+                padding: 20px;
                 border-radius: 8px;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.05);
                 margin-bottom: 30px;
@@ -115,18 +117,60 @@
             .contact-link:hover {
                 text-decoration: underline;
             }
+            
+            /* Mobile responsiveness improvements */
+            @media (max-width: 991px) {
+                .navbar-nav {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                
+                .navbar-brand {
+                    margin: 5px 10px;
+                    font-size: 0.9rem;
+                }
+                
+                .navbar h1 {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                
+                .navbar-collapse {
+                    text-align: center;
+                }
+            }
+            
+            @media (max-width: 767px) {
+                .navbar-brand {
+                    margin: 3px 5px;
+                    font-size: 0.85rem;
+                }
+                
+                .blog-post,
+                .sidebar-section {
+                    padding: 15px;
+                }
+                
+                .page-header {
+                    font-size: 1.5rem;
+                }
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand navbar-dark">
             <div class="container">
-                <h1>Mark McCann</h1>
-                <div class="navbar-nav">
-                    <a class="navbar-brand" href="index.html">Home</a>
-                    <a class="navbar-brand" href="academic.html">Academics</a>
-                    <a class="navbar-brand" href="skills.html">Certifications</a>
-                    <a class="navbar-brand" href="service.html">Community Service/Hobbies</a>
-                    <a class="navbar-brand" href="work.html">Work</a>
+                <div class="d-flex flex-column flex-lg-row w-100 align-items-center">
+                    <h1>Mark McCann</h1>
+                    <div class="navbar-nav flex-wrap justify-content-center">
+                        <a class="navbar-brand" href="index.html">Home</a>
+                        <a class="navbar-brand" href="academic.html">Academics</a>
+                        <a class="navbar-brand" href="skills.html">Certifications</a>
+                        <a class="navbar-brand" href="service.html">Community Service/Hobbies</a>
+                        <a class="navbar-brand" href="work.html">Work</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -148,21 +192,21 @@
                             Job Description: Pizza Hut Waipahu Team Member
                         </p>
                         <p>
-                            In this career, I have gathered skills involving using the maketable and chicken station. Currently, I am learning more about the cut table and cashier in the next few weeks.
+                            In this career, I have gathered skills involving using the make table and chicken station. Currently, I am learning more about the cut table and cashier position in the next few weeks.
                         </p>
                         <p>
-                            Maketable: At the maketable, I learnt to make and prepare different kind of foods the restuarant wants me to make. For example, I have knowledge on how to make, stretch dough, create certain types of pizzas, pastas, and sides. Also on the maketable, I prep fries and traditional chicken instead in the chicken area because of the contaimination rules Hut brands follow.
+                            Make Table: At the make table, I learned to prepare different kinds of foods the restaurant needs me to make. For example, I have knowledge on how to stretch dough, create certain types of pizzas, pastas, and sides. Also on the make table, I prep fries and traditional chicken instead of in the chicken area because of the contamination rules Hut brands follow.
                         </p>
                         <p>
-                            Chicken/Sauce Stations: At the chicken station, I learned how to manage the fryer by knowing what buttons to press and as well how to transfer the chicken to the sauce area. Within the chicken position, I learned how to manage packing and frying boneless chicken, which helped me become more efficent while working as I wouldn't run out of chicken.
+                            Chicken/Sauce Stations: At the chicken station, I learned how to manage the fryer by knowing what buttons to press as well as how to transfer the chicken to the sauce area. Within the chicken position, I learned how to manage packing and frying boneless chicken, which helped me become more efficient while working as I wouldn't run out of chicken.
                         </p>
                     </article>
                     
                     <div class="blog-post">
                         <h3>Goals</h3>
                         <ul class="goal-list">
-                            <li>Acquire 1 year of job experience at Pizza hut</li>
-                            <li>Work at Pizza Hut, while pursuing my associates.</li>
+                            <li>Acquire 1 year of job experience at Pizza Hut</li>
+                            <li>Work at Pizza Hut, while pursuing my associate's degree</li>
                             <li class="completed">Acquire a job</li>
                             <li class="completed">Be involved in a hack</li>
                         </ul>
@@ -182,8 +226,6 @@
                     </div>
                 </div>
             </div>
-            
-
         </main>
     </body>
 </html>
